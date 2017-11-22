@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-photokandy-video-thumbnail"
+    id="izemedia-cordova-plugin-video-thumbnail"
     version="2.1.0">
     <engines>
     	<engine name="cordova" version=">=2.9.0" />
@@ -11,12 +11,11 @@
     <author>Kerri Shotts</author>
     <keywords>video, thumbnail, ios, android</keywords>
     <license>MIT</license>
-    <dependency id="cordova-plugin-file" version="^4.0.0"/>
+    <dependency id="cordova-plugin-file" version="^5.0.0"/>
     <js-module src="www/PKVideoThumbnail.js" name="PKVideoThumbnail">
         <clobbers target="window.PKVideoThumbnail" />
     </js-module>
     <platform name="ios">
-        <!-- ios-specific elements -->
         <header-file src="src/ios/PKVideoThumbnail.h" />
         <source-file src="src/ios/PKVideoThumbnail.m" />
         <framework src="MediaPlayer.framework" />
@@ -27,7 +26,6 @@
         </config-file>
     </platform>
     <platform name="android">
-        <!-- android-specific elements -->
         <config-file target="config.xml" parent="/*">
             <feature name="PKVideoThumbnail">
                 <param name="android-package" value="com.photokandy.PKVideoThumbnail.PKVideoThumbnail" />
